@@ -1,0 +1,64 @@
+.family-lab {
+  --family-ink: #eaf3fa;
+  --family-muted: #9dafc1;
+  --family-panel: rgba(13, 29, 45, .88);
+  color: var(--family-ink);
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 28px clamp(16px, 3vw, 38px) 42px;
+}
+.family-header { display:flex; justify-content:space-between; align-items:flex-end; gap:24px; margin-bottom:24px; }
+.family-header h1 { margin:5px 0 8px; font-size:clamp(26px, 3vw, 38px); letter-spacing:-.035em; }
+.family-subtitle { max-width:760px; margin:0; color:var(--family-muted); line-height:1.65; }
+.family-eyebrow { margin:0; color:#7dd8d0; font-size:10px; font-weight:800; letter-spacing:.14em; }
+.family-choice-chip { display:flex; align-items:center; gap:9px; flex:none; padding:10px 13px; color:#c7e6dc; background:#183529; border:1px solid #315b49; border-radius:999px; font-size:10px; font-weight:750; letter-spacing:.06em; }
+.family-method-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:10px; margin-bottom:16px; }
+.family-method-grid section { min-width:0; padding:12px; border:1px solid #243a50; border-radius:13px; background:rgba(11,26,40,.74); }
+.family-method-grid section>span { display:block; margin:0 0 9px 2px; color:#94aabd; font-size:10px; font-weight:750; text-transform:uppercase; letter-spacing:.08em; }
+.family-method-grid section>div { display:flex; flex-wrap:wrap; gap:7px; }
+.family-method-grid button { padding:7px 10px; border:1px solid #30465a; border-radius:8px; color:#c2d0dc; background:#14283b; font-size:11px; cursor:pointer; transition:background .2s,border-color .2s,color .2s,transform .2s; }
+.family-method-grid button:hover { border-color:var(--method-color); transform:translateY(-1px); }
+.family-method-grid button.active { color:#f4fbff; border-color:var(--method-color); background:color-mix(in srgb,var(--method-color) 18%,#14283b); box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--method-color) 28%,transparent); }
+.family-main-grid { display:grid; grid-template-columns:minmax(0,1.3fr) minmax(340px,.85fr); gap:16px; align-items:stretch; }
+.family-model-card,.family-info-card { min-width:0; overflow:hidden; border:1px solid #263d52; border-radius:16px; background:var(--family-panel); box-shadow:0 18px 44px rgba(0,0,0,.16); }
+.family-card-head { display:flex; justify-content:space-between; align-items:center; padding:17px 19px 13px; }
+.family-card-head h2,.family-info-card h2 { margin:5px 0 0; font-size:19px; }
+.family-live-tag { display:flex; align-items:center; gap:7px; color:#b9d5df; font-size:9px; font-weight:800; letter-spacing:.1em; }
+.family-live-tag i { width:7px;height:7px;border-radius:50%;background:#64ddbb;box-shadow:0 0 10px #64ddbb; }
+.family-canvas-wrap { position:relative; height:420px; min-height:350px; background:radial-gradient(ellipse at 50% 42%,#183149,#091725 72%); }
+.family-canvas-wrap canvas { display:block; }
+.family-model-actions { position:absolute; left:14px; bottom:14px; display:flex; gap:7px; }
+.family-model-actions button { display:flex; align-items:center; gap:6px; padding:8px 10px; border:1px solid #476075; border-radius:8px; background:rgba(10,24,37,.88); color:#e5f0f7; font-size:10px; cursor:pointer; backdrop-filter:blur(8px); }
+.family-model-actions button:hover { border-color:#7dd8d0; }
+.family-model-note { position:absolute; right:13px; bottom:19px; color:#90a6b6; font-size:9px; }
+.family-model-legend { display:flex; flex-wrap:wrap; gap:14px; padding:12px 17px 15px; border-top:1px solid #24394c; color:#9fb1c0; font-size:10px; }
+.family-model-legend span { display:flex; align-items:center; gap:6px; }
+.family-model-legend i { width:8px;height:8px;border-radius:50%;display:inline-block; }
+.legend-organ { background:#c66b8c; }.legend-method { background:#79d8cf; }.legend-flow { background:#e4d27d; }
+.family-label { display:block; max-width:120px; padding:4px 7px; border:1px solid rgba(154,190,211,.62); border-radius:6px; color:#eaf5fb; background:rgba(7,19,31,.96); font-family:inherit; font-size:9px; font-weight:650; line-height:1.2; text-align:center; white-space:nowrap; cursor:pointer; box-shadow:0 2px 8px #0008; transition:background .2s,border-color .2s,transform .2s; }
+.family-label:hover,.family-label.selected { color:#fff8d7; border-color:#ffe59a; background:rgba(100,74,35,.88); transform:scale(1.05); }
+.family-info-card { padding:19px; display:flex; flex-direction:column; }
+.family-info-card h2 { margin:6px 0 17px; font-size:23px; }
+.family-info-tabs { display:flex; gap:5px; padding:4px; border-radius:9px; background:#0a1927; }
+.family-info-tabs button { flex:1; display:flex; justify-content:center; align-items:center; gap:6px; min-width:0; padding:9px 5px; border:0; border-radius:7px; color:#9cb1c1; background:transparent; font-size:10px; cursor:pointer; }
+.family-info-tabs button.active { color:#eaf7f8; background:color-mix(in srgb,var(--method-color) 24%,#142b3c); box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--method-color) 40%,transparent); }
+.family-mechanism-copy { min-height:132px; margin:19px 0 14px; color:#d4e0e8; font-size:13px; line-height:1.75; }
+.family-info-list { display:grid; gap:11px; min-height:132px; margin:17px 0 14px; align-content:start; }
+.family-info-list>div { display:flex; align-items:flex-start; gap:9px; color:#cfdae4; font-size:11px; line-height:1.55; animation:family-in .35s ease both; }
+.family-info-list>div i { width:6px;height:6px;flex:none;margin-top:5px;border-radius:50%;background:var(--method-color);box-shadow:0 0 8px var(--method-color); }
+@keyframes family-in { from { opacity:0; transform:translateY(5px); } to {opacity:1; transform:translateY(0);} }
+.family-callout { margin-top:auto; padding:12px 13px; border:1px solid color-mix(in srgb,var(--method-color) 35%,#263d52); border-left:3px solid var(--method-color); border-radius:9px; background:color-mix(in srgb,var(--method-color) 7%,#102237); }
+.family-callout b { color:#e9f4f8; font-size:10px; }.family-callout p { margin:5px 0 0; color:#afc0cd; font-size:10px; line-height:1.55; }
+.family-source-links { display:flex; flex-wrap:wrap; gap:8px 14px; margin-top:13px; }
+.family-source-links a,.family-footer a { color:#8bd8d5; font-size:10px; text-decoration:none; }.family-source-links a:hover,.family-footer a:hover { text-decoration:underline; }
+.family-health-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:11px; margin-top:16px; }
+.family-health-grid article { padding:14px; border:1px solid #243b50; border-radius:12px; background:rgba(13,29,45,.76); }
+.family-health-grid article>div { display:grid; place-items:center; width:29px;height:29px;margin-bottom:10px;border-radius:9px;background:#1e394b;color:#85d5cc; }
+.family-health-grid b { font-size:11px; }.family-health-grid p { margin:6px 0 0; color:#a9bac7; font-size:10px; line-height:1.6; }
+.family-note { display:flex; gap:10px; margin-top:14px; padding:12px 14px; border:1px solid #574e36; border-radius:10px; background:#28271e; color:#e3d2a4; }
+.family-note svg { flex:none;margin-top:1px; }.family-note p { margin:0;color:#d4c89f;font-size:10px;line-height:1.55; }
+.family-footer { margin-top:15px; color:#879bab; font-size:10px; line-height:1.7; }
+@media(max-width:1000px) { .family-main-grid { grid-template-columns:1fr; }.family-info-card { min-height:360px; }.family-health-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media(max-width:680px) { .family-lab { padding:20px 13px 30px; }.family-header { align-items:flex-start;flex-direction:column; }.family-method-grid { grid-template-columns:1fr 1fr; }.family-method-grid section:last-child { grid-column:1/-1; }.family-canvas-wrap { height:360px;min-height:320px; }.family-label { max-width:100px;padding:3px 5px;font-size:8px; }.family-health-grid { grid-template-columns:1fr 1fr; }.family-info-card { padding:15px; } }
+@media(max-width:420px) { .family-method-grid,.family-health-grid { grid-template-columns:1fr; }.family-method-grid section:last-child { grid-column:auto; }.family-canvas-wrap { height:320px; }.family-label { max-width:90px;padding:3px 4px;font-size:7px; }.family-info-tabs button { font-size:9px; } }
+@media(prefers-reduced-motion:reduce) { .family-lab *, .family-lab *::before,.family-lab *::after { animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important; } }

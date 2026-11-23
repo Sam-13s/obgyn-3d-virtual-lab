@@ -1,0 +1,591 @@
+
+.anatomy-page {
+  min-height: 100vh;
+  padding: 28px;
+  color: #eaf1fa;
+  background: #07111f;
+  font-family: "DM Sans", sans-serif;
+}
+
+.anatomy-header,
+.anatomy-heading,
+.anatomy-tabs,
+.viewer-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.anatomy-heading {
+  justify-content: flex-start;
+  gap: 17px;
+}
+
+.anatomy-heading h1 {
+  margin: 5px 0;
+  font-size: clamp(21px, 3vw, 29px);
+}
+
+.anatomy-heading p,
+.learning-title p,
+.quiz-heading p {
+  color: #8fa1b8;
+  margin: 5px 0;
+  font-size: 13px;
+}
+
+.eyebrow,
+.panel-kicker {
+  color: #56d6c3;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.back-button,
+.icon-button {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  color: #dce8f8;
+  background: #142438;
+  border: 1px solid #263b53;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.lab-status {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 10px 14px;
+  border: 1px solid #245449;
+  border-radius: 30px;
+  color: #73e5c8;
+  background: #102a2b;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.live-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #51dfb9;
+  box-shadow: 0 0 10px #51dfb9;
+}
+
+.anatomy-tabs {
+  justify-content: flex-start;
+  gap: 8px;
+  margin: 30px 0 20px;
+  padding: 7px;
+  width: fit-content;
+  background: #101e30;
+  border: 1px solid #1c3047;
+  border-radius: 13px;
+}
+
+.anatomy-tabs button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 15px;
+  border: 0;
+  border-radius: 9px;
+  background: transparent;
+  color: #93a6bd;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.anatomy-tabs button.active {
+  color: #fff;
+  background: #25445a;
+}
+
+.anatomy-workspace {
+  display: grid;
+  grid-template-columns: minmax(0, 1.8fr) minmax(260px, 0.8fr);
+  gap: 20px;
+}
+
+.viewer-panel,
+.organ-panel,
+.learning-panel,
+.quiz-panel {
+  min-width: 0;
+  background: #101e30;
+  border: 1px solid #1d3047;
+  border-radius: 18px;
+}
+
+.viewer-panel {
+  padding: 20px;
+}
+
+.viewer-top h2,
+.organ-panel h2 {
+  margin: 7px 0;
+  font-size: 19px;
+}
+.model-camera-controls { display: flex; gap: 6px; }
+.model-camera-controls .icon-button { width: 38px; height: 38px; }
+.model-camera-controls .icon-button:focus-visible { outline: 2px solid #70dfd0; outline-offset: 3px; }
+
+.three-viewer {
+  position: relative;
+  height: 490px;
+  margin-top: 17px;
+  overflow: hidden;
+  border: 1px solid #1c3047;
+  border-radius: 14px;
+  background: #0b1726;
+}
+
+.model-mode-toggle { display: inline-flex; gap: 4px; margin: 12px 0 0; padding: 4px; border: 1px solid #263b53; border-radius: 10px; background: #0b1726; }
+.model-mode-toggle button { padding: 8px 12px; border: 0; border-radius: 7px; color: #92a8bd; background: transparent; font: inherit; font-size: 10px; font-weight: 700; cursor: pointer; }
+.model-mode-toggle button.active { color: #f0fbfb; background: #25445a; }
+.model-mode-toggle button:focus-visible,.model-animation-controls button:focus-visible,.organ-selector button:focus-visible,.anatomy-floating-label:focus-visible { outline: 2px solid #70dfd0; outline-offset: 3px; }
+.model-loading { padding: 10px 13px; border: 1px solid #2c5364; border-radius: 8px; color: #b6d5e0; background: #091723ed; font-size: 11px; }
+.model-animation-controls { display: flex; align-items: center; flex-wrap: wrap; gap: 9px 13px; margin-top: 10px; padding: 10px 12px; border: 1px solid #263b53; border-radius: 10px; background: #0c1a2a; }
+.model-animation-controls button { display: inline-flex; align-items: center; gap: 6px; padding: 8px 10px; border: 1px solid #365064; border-radius: 8px; color: #c3d5e2; background: #142438; font: inherit; font-size: 10px; font-weight: 700; cursor: pointer; }
+.model-animation-controls button.active { color: #082126; border-color: #63d8c7; background: #63d8c7; }
+.model-animation-controls label { display: inline-flex; align-items: center; gap: 6px; color: #9fb4c7; font-size: 10px; }
+.model-animation-controls label b { color: #d9e8ef; }
+.model-animation-controls input[type="range"] { width: 96px; accent-color: #63d8c7; }
+.clip-rig-badge { margin-left: auto; color: #79cdbf; font-size: 9px; font-weight: 700; }
+.model-attribution { margin: 9px 1px 0; color: #8299ad; font-size: 9px; line-height: 1.55; }
+.model-attribution a { color: #78cbd7; }
+.model-attribution a:focus-visible { outline: 2px solid #70dfd0; outline-offset: 2px; }
+
+.three-viewer canvas {
+  display: block;
+  touch-action: pan-y;
+}
+
+.model-label {
+  width: 190px;
+  color: #a8d8e7;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-align: center;
+  pointer-events: none;
+}
+
+.viewer-hint {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: max-content;
+  max-width: 90%;
+  padding: 8px 12px;
+  border-radius: 20px;
+  background: #14263bde;
+  color: #a9bbcf;
+  font-size: 10px;
+  text-align: center;
+  pointer-events: none;
+}
+
+.anatomy-color-key {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 9px 15px;
+  padding: 13px 3px 0;
+  color: #a9bdca;
+  font-size: 10px;
+}
+.anatomy-color-key span { display: inline-flex; align-items: center; gap: 6px; }
+.anatomy-color-key i { width: 9px; height: 9px; border: 1px solid #ffffff40; border-radius: 50%; box-shadow: 0 0 8px #ffffff15; }
+.anatomy-color-key small { width: 100%; color: #748c9d; font-size: 9px; }
+
+.organ-selector {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.organ-selector button {
+  padding: 9px 12px;
+  border: 1px solid #2a4059;
+  border-radius: 9px;
+  color: #9eb1c8;
+  background: #142438;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.organ-selector button.selected {
+  color: #fff;
+  background: #25465b;
+  border-color: #55cdbb;
+}
+
+.organ-panel {
+  padding: 23px;
+  align-self: start;
+}
+
+.organ-icon {
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  margin-top: 25px;
+  border-radius: 15px;
+  color: #f1a7c7;
+  background: #44243e;
+}
+
+.organ-category {
+  display: inline-block;
+  color: #65d6c3;
+  font-size: 11px;
+}
+
+.organ-detail {
+  margin-top: 26px;
+}
+
+.organ-detail h3 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #d9e5f2;
+  font-size: 12px;
+}
+
+.organ-detail p {
+  color: #93a6bc;
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.organ-location {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 25px;
+  padding: 14px;
+  border-radius: 10px;
+  background: #172a40;
+}
+
+.organ-location span {
+  color: #6d829b;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.organ-location strong {
+  color: #dce8f6;
+  font-size: 12px;
+}
+
+.organ-specs { margin-top: 13px; padding: 14px; border: 1px solid #294258; border-radius: 11px; background: linear-gradient(145deg,#13283a,#102133); }
+.organ-spec-title { display: flex; flex-direction: column; gap: 5px; }
+.organ-spec-title span { color: #72d6c5; font-size: 8px; font-weight: 800; letter-spacing: 1.1px; }
+.organ-spec-title b { color: #e2edf5; font-size: 11px; }
+.organ-specs > p { margin: 10px 0 6px; color: #b8c9d4; font-size: 11px; line-height: 1.65; }
+.organ-specs > a { color: #79cbd6; font-size: 9px; text-decoration: none; }
+.organ-specs > a:hover { text-decoration: underline; }
+.organ-color-spec { display: flex; align-items: flex-start; gap: 9px; margin-top: 12px; padding-top: 11px; border-top: 1px solid #294054; }
+.organ-color-spec > i { flex: none; width: 13px; height: 13px; margin-top: 2px; border: 1px solid #ffffff45; border-radius: 50%; box-shadow: 0 0 11px #d58a9640; }
+.organ-color-spec b,.organ-color-spec small { display: block; }
+.organ-color-spec b { color: #d5e2e9; font-size: 10px; }
+.organ-color-spec small { margin-top: 4px; color: #91a6b5; font-size: 9px; line-height: 1.5; }
+.organ-scale-note { display: block; margin-top: 11px; color: #748c9d; font-size: 8px; line-height: 1.55; }
+
+.primary-lab-button,
+.secondary-lab-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  width: 100%;
+  margin-top: 20px;
+  padding: 13px;
+  border: 0;
+  border-radius: 10px;
+  color: #071b25;
+  background: #58d7c1;
+  font-size: 12px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.primary-lab-button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.secondary-lab-button {
+  color: #cbd8e7;
+  background: #1c3047;
+}
+
+.learning-panel,
+.quiz-panel {
+  padding: 25px;
+}
+
+.learning-title h2,
+.quiz-heading h2 {
+  margin: 8px 0;
+  font-size: 23px;
+}
+
+.learning-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 25px;
+}
+
+.learning-card {
+  padding: 19px;
+  text-align: left;
+  color: #eaf1fa;
+  background: #142438;
+  border: 1px solid #263b53;
+  border-radius: 13px;
+  cursor: pointer;
+}
+
+.learning-number {
+  color: #58d7c1;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.learning-card h3 {
+  margin: 13px 0 8px;
+  font-size: 15px;
+}
+
+.learning-card p {
+  min-height: 65px;
+  color: #95a8be;
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+.learn-more {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #65d9c4;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.quiz-panel {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.quiz-card {
+  margin-top: 25px;
+  padding: 25px;
+  background: #142438;
+  border: 1px solid #2a4059;
+  border-radius: 14px;
+}
+
+.quiz-progress {
+  display: flex;
+  justify-content: space-between;
+  color: #8fa5bc;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.progress-track {
+  height: 6px;
+  margin: 13px 0 27px;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #263a50;
+}
+
+.progress-track div {
+  height: 100%;
+  background: #58d7c1;
+  transition: width 0.3s;
+}
+
+.quiz-card h3 {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.answer-list {
+  display: grid;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.answer-list button {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 13px;
+  border: 1px solid #30445c;
+  border-radius: 10px;
+  color: #cbd8e7;
+  background: #101e30;
+  text-align: left;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.answer-list button.chosen {
+  border-color: #58d7c1;
+  background: #1d3c43;
+}
+
+.answer-list button span {
+  display: grid;
+  place-items: center;
+  width: 27px;
+  height: 27px;
+  border-radius: 8px;
+  background: #263b53;
+  font-weight: 800;
+}
+
+.next-question {
+  max-width: 230px;
+  margin-left: auto;
+}
+
+.quiz-result {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.quiz-result > svg {
+  color: #58d7c1;
+}
+
+.quiz-result h2 {
+  margin: 12px 0;
+}
+
+.quiz-score {
+  margin: 20px;
+  color: #58d7c1;
+  font-size: 48px;
+  font-weight: 800;
+}
+
+.quiz-result p {
+  color: #98aabe;
+  font-size: 13px;
+}
+
+@media (max-width: 850px) {
+  .anatomy-workspace {
+    grid-template-columns: 1fr;
+  }
+
+  .organ-panel {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px 20px;
+  }
+
+  .organ-panel .panel-kicker,
+  .organ-panel .organ-icon,
+  .organ-panel h2,
+  .organ-panel .organ-category,
+  .organ-panel .primary-lab-button {
+    grid-column: 1 / -1;
+  }
+
+  .organ-detail {
+    margin-top: 15px;
+  }
+}
+
+@media (max-width: 560px) {
+  .anatomy-page {
+    padding: 14px;
+  }
+
+  .anatomy-header {
+    align-items: flex-start;
+  }
+
+  .lab-status {
+    padding: 8px;
+    font-size: 8px;
+  }
+
+  .anatomy-tabs {
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  .anatomy-tabs button {
+    white-space: nowrap;
+    padding: 10px;
+    font-size: 10px;
+  }
+
+  .viewer-panel,
+  .organ-panel,
+  .learning-panel,
+  .quiz-panel {
+    padding: 15px;
+  }
+
+  .three-viewer {
+    height: 370px;
+  }
+
+  .learning-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .organ-panel {
+    display: block;
+  }
+
+  .organ-detail {
+    margin-top: 20px;
+  }
+
+  .quiz-card {
+    padding: 16px;
+  }
+}
+
+
+
+
+.anatomy-floating-label {
+    width: auto;
+    max-width: 135px;
+    background: rgba(7, 17, 31, 0.92);
+    color: #f7c3dc;
+    border: 1px solid rgba(247, 167, 202, 0.65);
+    border-radius: 7px;
+    padding: 4px 7px;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+    white-space: nowrap;
+    pointer-events: auto;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.3);
+}
+.anatomy-floating-label:hover,.anatomy-floating-label.selected { color: #fff2b5; border-color: #ffe08a; background: #263543f2; }
+.anatomy-floating-label.selected { box-shadow: 0 0 0 1px #ffe08a65, 0 3px 15px #0008; }

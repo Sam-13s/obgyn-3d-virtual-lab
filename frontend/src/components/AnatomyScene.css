@@ -1,0 +1,8 @@
+.scene-wrap{position:relative;display:grid;grid-template-rows:minmax(0,1fr) auto auto;width:100%;height:430px;min-height:340px;overflow:hidden;border:1px solid #20384d;border-radius:12px;background:#091522}
+.scene-wrap>div:first-child{height:100%;min-height:0}
+.scene-wrap canvas{display:block;width:100%;height:100%;touch-action:pan-y}
+.scene-hint{justify-self:center;max-width:94%;margin:5px auto 2px;padding:5px 9px;border:1px solid #294155;border-radius:20px;color:#9db1c2;background:#081522e8;font-size:8px;letter-spacing:.07em;text-align:center;white-space:nowrap;pointer-events:none}
+.scene-color-key{display:flex;flex-wrap:wrap;gap:7px 13px;padding:10px 12px;border-top:1px solid #20384d;background:#0b1927;color:#aebdca;font-size:9px}
+.scene-color-key span{display:inline-flex;align-items:center;gap:6px;white-space:nowrap}
+.scene-color-key i{display:inline-block;width:9px;height:9px;flex:none;border:1px solid #ffffff45;border-radius:50%;box-shadow:0 0 8px #ffffff16}
+@media(max-width:560px){.scene-wrap{height:360px}.scene-color-key{gap:7px 10px;padding:9px;font-size:8px}.scene-hint{font-size:7px}}
