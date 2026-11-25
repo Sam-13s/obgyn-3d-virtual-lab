@@ -1,4 +1,4 @@
-
+﻿
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import { fileURLToPath } from "node:url";
@@ -15,7 +15,7 @@ export default defineConfig({
     strictPort: false,
     host: "0.0.0.0",
     proxy: {
-      "/api": { target: "http://127.0.0.1:8010", changeOrigin: true },
+      "/api": { target: "http://127.0.0.1:8000", changeOrigin: true },
     },
   },
 
@@ -23,7 +23,7 @@ export default defineConfig({
     port: 4173,
     strictPort: false,
     proxy: {
-      "/api": { target: "http://127.0.0.1:8010", changeOrigin: true },
+      "/api": { target: "http://127.0.0.1:8000", changeOrigin: true },
     },
   },
 
@@ -58,3 +58,4 @@ export default defineConfig({
     },
   },
 });
+
