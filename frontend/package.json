@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite --host 0.0.0.0",
+    "prebuild": "node -e \"require.resolve('vite/package.json')\" || npm ci --include=dev",
     "build": "vite build",
     "preview": "vite preview --host 0.0.0.0",
     "test": "node --test"
